@@ -1,0 +1,172 @@
+@media print{
+    div.tm-sidebar{
+        display: none;
+    }
+
+    .tm-banner{
+        width:580px;
+        height: 180px;
+        padding:0;
+    }
+
+    .tm-main-content{
+        margin: 0;
+        padding: 0;
+    }
+
+    div.tm-content-box{
+        flex-direction: column;
+    }
+
+    .pad{
+        padding: 0px;
+    }
+
+    #home::before, section::before{
+        display: none;
+    }
+
+    div.flex-2-col h2.tm-section-title{
+        color: blue;
+    }
+
+    div.flex-2-col p.tm-section-description{
+        text-indent: initial;
+    }
+
+    div.flex-2-col p.tm-section-description::first-letter{
+        color: black;
+        font-size: 16px;
+    }
+
+    p.tm-section-description{
+        font-style: initial;
+    }
+
+    section + section, #about{
+        display: none;
+    }
+
+    footer p::first-letter{
+        font-size:16px;
+        color: #666;
+    }
+
+    footer p{
+        text-indent: initial;
+    }
+}
+
+#about .img-fluid{
+    border-radius: 50%;
+}
+
+#about h2:hover{
+    background: #23c1d3 ;
+    color: white;
+    font-weight: bold;
+    transition:0.3s;
+}
+
+p::first-letter{
+    color: #76cdd7;
+    font-size: 30px;
+}
+
+nav, .tm-content-box{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.678);
+}
+
+#home::before, section::before{
+    content: "";
+    position: absolute;
+    border-top: 22px solid #49badd;;
+    border-right: 130px solid transparent;
+}
+
+#tmCarousel div.carousel-item.active h2{
+    color: gainsboro; 
+    letter-spacing: 5px;
+}
+
+h2 + p{
+    font-style: italic;
+}
+
+p{
+    text-indent: 7%;
+}
+
+.tm-banner-inner p{
+    text-indent: initial;
+}
+
+section.heading h2{
+    color: #76cdd7;
+    text-align: center;
+}
+
+section.heading a{
+    color:black;
+}
+
+section.heading a:visited{
+    color: silver;
+}
+
+section.heading a:hover{
+    color: #76cdd7;
+    border-bottom: 1px double #76cdd7;
+}
+
+section.heading a.text::after{
+    content:'New';
+    color:red;
+    font-size: 60%;
+    position: absolute; 
+}
+
+section.blocks .box{
+    border: 1px solid rgba(192, 192, 192, 0.699);
+}
+
+section.blocks div.tm-content-box li.box h2{
+    font-size: 45px;
+}
+
+section.blocks div.tm-content-box li.box p{
+    font-size: 23px;
+    text-indent: initial;
+    color: rgb(61, 61, 61);
+}
+
+section.blocks div.tm-content-box li.box p::first-letter{
+    color: black;
+    font-size: 33px;
+}
+
+section.blocks li:nth-child(2n+1){
+    background:rgba(192, 192, 192, 0.377);
+}
+
+nav ul li.tm-nav-item{
+    border-bottom: 1.5px dotted  silver;
+}
+
+nav ul li.tm-nav-item:last-child{
+    border-bottom: none;
+}
+
+input.form-control, form .btn{
+    color:red;
+}
+
+form .btn:hover{
+    background: #23c1d3;
+}
+
+.mandatory-field::after{
+    content:"*";
+    color:red;
+    font-weight: bold;
+}
