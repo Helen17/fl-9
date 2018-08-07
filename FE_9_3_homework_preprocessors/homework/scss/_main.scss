@@ -1,0 +1,207 @@
+@mixin headers{
+    display:flex;
+    justify-content: flex-end;
+    color: $headersColor;
+    text-transform: uppercase;
+}
+
+body{
+    background: $backgroundColor;
+}
+
+.main-wrapper{
+    width: 75%;
+    margin: 0 auto;
+    color: $textColor;
+    font-size: $fontSize;
+    font-family: $mainFont;
+
+    p{
+        line-height: $lineHeight;
+        margin-bottom:20px;
+        margin-top:0;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    
+    .logo{
+        width: 35%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        height: 50px;
+        border-top: $mainBorder;
+        border-bottom: $mainBorder;
+        margin-bottom: 25px;
+        padding: 5px 0;
+
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-right: 30px;
+            color: $navigationColor;
+
+            &:hover{
+                color: darken($navigationColor,20%);
+            }
+        }
+    }
+}
+
+div.toolbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    input{
+        width: 18%;
+        padding:10px 20px;
+        background-color: $backgroundColor;
+        border: 1px solid $navigationColor;
+
+        &::placeholder{
+            color: $navigationColor;
+        }
+
+        &:focus{
+            outline: 1px solid lighten($navigationColor, 25%);
+        }
+    }
+}
+
+div.post-list{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    article{
+        width:46.5%;
+        height: 100%;
+        padding:10px;
+        background: $contentBackgroundColor;
+        margin-bottom:20px;
+
+        img{
+            width:100%;
+        }
+
+        div {
+            padding:5px 10px;
+
+            .post-description{
+                font-size: 13px;
+                padding-left:3px;
+                color: $postDescriptionColor;
+            }
+
+            h3{
+                margin:5px 0;
+                padding:5px 0 0 0;
+                border-top: $mainBorder;
+                text-transform: uppercase;
+                color: $headersContentColor;
+            }
+        }
+    }
+}
+
+.about{
+    padding: 10px 10px 40px 20px;
+    
+    h1{
+        @include headers();
+        margin-bottom:0;
+    }
+
+    img{
+        width:100%;
+    }
+}
+
+.contact-form{
+    h1{
+       @include headers();
+       margin-bottom:0;
+    }
+
+    h4{
+        @include headers();
+        margin-top:0;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+
+        input{
+            width:98%;
+            margin-bottom: 20px;
+            padding: 1%;
+            background-color: $backgroundColor;
+            border: $mainBorder;
+
+            &:focus{
+                outline:1px solid lighten($headersColor, 20%);
+            }
+        }
+
+        textarea{
+            width:98%;
+            padding: 1.1%;
+            height: 100px;
+            margin-bottom: 20px;
+            background-color: $backgroundColor;
+            border: $mainBorder;
+
+            &::placeholder{
+                font-family: $mainFont;
+            }
+
+            &:focus{
+                outline:1px solid lighten($headersColor, 20%);
+            }
+        }
+
+        .btn{
+            display: flex;
+            justify-content: flex-end;
+            
+            button{
+                width:20%;
+                height:40px;
+                background: $headersColor;
+                color:white;
+                border: none;
+                text-transform: uppercase;
+
+                &:hover{
+                    background: lighten($headersColor,10%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    font-size: 12px;
+}
