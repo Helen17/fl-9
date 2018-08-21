@@ -36,6 +36,3 @@ function checkDayTime(){
 
     return result;
 }
-
-
-
